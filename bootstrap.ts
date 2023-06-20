@@ -4,6 +4,7 @@
  * Script to download cld3 wasm binary from https://github.com/kwonoj/docker-cld3-wasm.
  */
 
+import * as crypto from 'crypto';
 import * as fs from 'fs';
 import * as path from 'path';
 import { exec, mkdir, rm } from 'shelljs';
