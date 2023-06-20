@@ -5,16 +5,14 @@
  */
 
 import * as crypto from 'crypto';
-import * as fs from 'fs';
 import * as path from 'path';
-import { exec, mkdir, rm } from 'shelljs';
+import { exec, mkdir } from 'shelljs';
 import { promisify } from 'util';
 //tslint:disable-next-line: no-require-imports no-var-requires
 const { config } = require('./package.json');
 
 // Package.json defines `cld3-version` under `config` section to find corresponding release version
 const version = config['cld3-version'];
-const readFile = promisify(fs.readFile);
 const asyncExec = promisify(exec);
 
 /**
